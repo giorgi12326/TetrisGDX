@@ -1,0 +1,18 @@
+sourceCompatibility = 17
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+sourceSets.main.java.srcDirs = [ "src/" ]
+
+eclipse.project.name = appName + "-core"
+dependencies {
+    // Add JUnit for testing
+    testImplementation 'junit:junit:4.13.2'
+
+    // Add Mockito if needed for mocking
+    testImplementation 'org.mockito:mockito-core:3.+'
+
+    // Add LibGDX dependencies
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+    testImplementation "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
+    testImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}

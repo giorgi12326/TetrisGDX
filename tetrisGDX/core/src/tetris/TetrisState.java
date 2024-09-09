@@ -1,0 +1,14 @@
+package tetris;
+
+public class TetrisState {
+	public int width;
+	public int height;
+	public int[][] field;
+	public int[][] figure;
+	public Pair position;
+	public int score;
+	public float speed = 2;
+
+	public TetrisState() {
+	}
+}
